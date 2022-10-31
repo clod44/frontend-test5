@@ -417,8 +417,6 @@ ul li::before {
 
 
 
-
-
 @media (max-width: 70rem) {
     
     .showcase-boxes{
@@ -456,6 +454,7 @@ ul li::before {
         line-height: 2rem;
         width: 100%;
     }
+
     .collapsable{
         display: none;
     }
@@ -484,6 +483,10 @@ ul li::before {
 }
 
 
+
+.show{
+    display: initial;
+}
 
 
 

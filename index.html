@@ -49,14 +49,15 @@
                     </a>
 
 
-                    <a href="#" class="navbar-item collapsable">Products</a>
-                    <a href="#" class="navbar-item collapsable">Services</a>
-                    <a href="#" class="navbar-item collapsable">Agency</a>
-                    <a href="#" class="navbar-item collapsable">Sales</a>
+                    <a href="#" class="navbar-item collapsable show">Products</a>
+                    <a href="#" class="navbar-item collapsable show">Services</a>
+                    <a href="#" class="navbar-item collapsable show">Agency</a>
+                    <a href="#" class="navbar-item collapsable show">Sales</a>
                     
                     <img id="navbar-hamburger" src="./res/icons/icon-hamburger.svg" style="cursor:pointer;" onclick="toggleNavbar()">
                     <script>
                         const navbar = document.getElementById("navbar");
+                        const navbarItems = document.getElementsByClassName("navbar-item");
                         const collapse = document.getElementById("collapse");
                         function toggleNavbar(){
                             if(navbar.style.flexDirection == "row"){
@@ -65,16 +66,20 @@
                                 navbar.style.height = "unset";
                                 navbar.style.paddingBottom = "1rem";
                                 navbar.style.background = "black";
-                                collapse.style.display = "unset";
+                                for (let i = 0; i < navbarItems.length; i++) {
+                                    navbarItems[i].classList.add('show');
+                                }
                             }else{
                                 navbar.style.flexDirection = "row";
                                 navbar.style.height = "2rem";
                                 navbar.style.paddingBottom = "0rem";
                                 navbar.style.background = "rgba(0,0,0, 0.5)";
-                                collapse.style.display = "none";
-                                
+                                for (let i = 0; i < navbarItems.length; i++) {
+                                    navbarItems[i].classList.remove('show');
+                                };
                             }
                         }
+
 
 
                     </script>
@@ -112,9 +117,9 @@
                     </div>
 
                     <div class="slogan">
-                        <p>▶</p>
+                        <p>→</p>
                         <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, ducimus?</h2>
-                        <p>◀</p>
+                        <p>←</p>
                     </div>
                 </div>
                 
@@ -205,7 +210,7 @@
 
             <div class="grindset">      
                 <div>
-                    <h2>▶ Some Other <span>Stuff</span>.</h2>  
+                    <h2>→ Some Other <span>Stuff</span>.</h2>  
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere esse, quas magnam sunt, placeat reiciendis quidem et illum quis, amet ratione veritatis. Amet nemo fugiat accusantium suscipit repellendus. Earum tempora dicta error. Sed repellat velit quod minima distinctio commodi ex necessitatibus odio ratione assumenda, totam magni praesentium facere. Dignissimos voluptates omnis, tempore molestias fugiat ut porro iste qui dolores, quam neque unde inventore, temporibus deserunt cupiditate maxime quia quas aperiam dolore! Alias vitae voluptatem harum soluta iste voluptate quaerat veniam eligendi et fugiat! Quaerat et nulla consequuntur similique molestias debitis atque tempore quisquam voluptas eligendi at, quasi accusantium itaque sequi!
                     </p>
