@@ -45,7 +45,7 @@
                     <a href="#" class="navbar-item-brand">
                         <img src="./res/brand-logo.png">
                         <h1>Malkocoglu</h1>    
-                        <img id="collapse" style="display: none;" src="./res/brand-logo.png">
+                        <img id="collapse-brand-logo" style="display: none;" src="./res/brand-logo.png">
                     </a>
 
 
@@ -58,7 +58,7 @@
                     <script>
                         const navbar = document.getElementById("navbar");
                         const navbarItems = document.getElementsByClassName("navbar-item");
-                        const collapse = document.getElementById("collapse");
+                        const collapse = document.getElementById("collapse-brand-logo");
                         function toggleNavbar(){
                             if(navbar.style.flexDirection == "row"){
                             
@@ -66,6 +66,7 @@
                                 navbar.style.height = "unset";
                                 navbar.style.paddingBottom = "1rem";
                                 navbar.style.background = "black";
+                                collapse.style.display = "unset";
                                 for (let i = 0; i < navbarItems.length; i++) {
                                     navbarItems[i].classList.add('show');
                                 }
@@ -74,6 +75,7 @@
                                 navbar.style.height = "2rem";
                                 navbar.style.paddingBottom = "0rem";
                                 navbar.style.background = "rgba(0,0,0, 0.5)";
+                                collapse.style.display = "none";
                                 for (let i = 0; i < navbarItems.length; i++) {
                                     navbarItems[i].classList.remove('show');
                                 };
