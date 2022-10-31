@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!--
+        google fonts    
+            font-family: 'Figtree', sans-serif; 5 7
+            font-family: 'Mrs Saint Delafield', sans-serif;
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;700&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet"> 
+    
+    
+    
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- Leaflet map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+
+
+
+    <title>frontend-test5</title>
+</head>
+<body>
+
+
+    <!--NAVBAR & BANNER-->
+    <section>
+        <!--BANNER-->
+        <div class="banner">
+            <div class="banner-fade">
+                
+            
+            
+                <!--NAVBAR-->
+                <div class="navbar" id="navbar">
+                    <a href="#" class="navbar-item-brand">
+                        <img src="./res/brand-logo.png">
+                        <h1>Malkocoglu</h1>    
+                        <img id="collapse" style="display: none;" src="./res/brand-logo.png">
+                    </a>
+
+
+                    <a href="#" class="navbar-item collapsable">Products</a>
+                    <a href="#" class="navbar-item collapsable">Services</a>
+                    <a href="#" class="navbar-item collapsable">Agency</a>
+                    <a href="#" class="navbar-item collapsable">Sales</a>
+                    
+                    <img id="navbar-hamburger" src="./res/icons/icon-hamburger.svg" style="cursor:pointer;" onclick="toggleNavbar()">
+                    <script>
+                        const navbar = document.getElementById("navbar");
+                        const collapse = document.getElementById("collapse");
+                        function toggleNavbar(){
+                            if(navbar.style.flexDirection == "row"){
+                            
+                                navbar.style.flexDirection = "column";
+                                navbar.style.height = "unset";
+                                navbar.style.paddingBottom = "1rem";
+                                navbar.style.background = "black";
+                                collapse.style.display = "unset";
+                            }else{
+                                navbar.style.flexDirection = "row";
+                                navbar.style.height = "2rem";
+                                navbar.style.paddingBottom = "0rem";
+                                navbar.style.background = "rgba(0,0,0, 0.5)";
+                                collapse.style.display = "none";
+                                
+                            }
+                        }
+
+
+                    </script>
+                </div>
+
+                
+                <!--BANNER CONTENT-->
+                <div class="banner-content">
+                    <h2>
+                        International Exchange of Crashed Lambos with Ridiculous Fees
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, architecto.
+                    </p>
+                    <a class="btn" href="#" style="margin-top: 2rem; font-size: 1.5rem;">Contact Us →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--SHOWCASE & STUFF-->
+    <section>
+        <div class="container showcase">
+            <div class="showcase-fade">
+
+                <div class="showcase-top">
+                    
+                    <!--Epic brand-->
+                    <div class="showcase-brand">
+                        <img src="./res/brand-logo.png">
+                        <p>Malkocoglu</p>    
+                    </div>
+
+                    <div class="slogan">
+                        <p>▶</p>
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, ducimus?</h2>
+                        <p>◀</p>
+                    </div>
+                </div>
+                
+                
+                <!--Horizontal showcase box-->
+                <div class="showcase-box showcase-box1">
+                    <div>
+                        <h3>Stuff We Exchange</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod dolorum quo neque debitis excepturi possimus ipsum magni itaque, nesciunt velit corporis ipsam, aliquid, fuga nemo saepe? Facere incidunt et in.
+                        </p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit, amet </li>
+                            <li>Lorem ipsum dolor sit, amet </li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente asperiores odit aperiam quibusdam  </li>
+                            <li>Lorem ipsum dolor sit, amet Lorem, ipsum dolor.</li>
+                            <li>Lorem ipsum dolor sit, amet Lorem ipsum dolor sit amet. </li>
+                        </ul>
+
+
+
+                    </div>
+                    <a class="btn btn-showcase" href="#">→</a>
+                    <img src="./res/lambo-half.jpg">
+                </div>
+
+
+
+
+
+                <!--Vertical showcase boxes-->
+                <div class="showcase-boxes">
+                    <!-- a box-->
+                    <div class="showcase-box showcase-box-vertical">
+                        <div>
+                            <h3>Stuff We Exchange</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, error aliquam ratione aliquid fuga alias tempora itaque magni atque sequi illum ea repellat velit. Numquam velit, labore blanditiis libero molestias ab quisquam dolorum animi sequi, alias possimus perspiciatis culpa aliquam quam odio commodi facilis mollitia voluptatibus eligendi error qui. Distinctio maiores assumenda blanditiis quasi, doloribus facilis ut veniam? Repellat nulla consectetur cum error beatae quisquam debitis veniam cupiditate ducimus, aliquid consequatur omnis neque deserunt quo vel ex odit in modi sunt totam ipsa. Pariatur eligendi magni dicta recusandae eos eveniet architecto itaque earum aperiam. Odit explicabo rerum vero optio praesentium?
+                            </p>
+                            <h4 style="padding-top: 2rem;">Another Idea</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, expedita!
+                            </p>
+                        </div>
+
+                        <div class="flex-grow" style="padding: 0;"></div>
+
+                        <img src="./res/drift1.png">
+                        <a class="btn btn-showcase" href="#">↓</a>
+                    </div>
+                    
+                    <!-- a box-->
+                    <div class="showcase-box showcase-box-vertical">
+                        <div>
+                            <h3>Stuff We Exchange</h3>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum doloremque illo ipsam odio atque, nulla, voluptates iure minus at praesentium deleniti laboriosam accusantium pariatur consequatur eaque assumenda voluptatem facere recusandae fuga consequuntur molestias perspiciatis tenetur cumque. Dolores obcaecati omnis porro molestiae! Rem ab nisi, expedita vel ex eius a delectus.
+                            </p>
+
+                            <ul style="text-align: left; font-weight: bold;">
+                                <li>Lorem ipsum dolor sit, amet </li>
+                                <li>Lorem ipsum dolor sit, amet </li>
+                            </ul>
+
+
+                        </div>
+
+                        <div class="flex-grow" style="padding: 0;"></div>
+
+                        <img src="./res/brand-logo.png">
+                        <a class="btn btn-showcase" href="#">↓</a>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    <!--OUT GRINDSET-->
+    <section>
+        <div class="container">
+
+            <div class="grindset">      
+                <div>
+                    <h2>▶ Some Other <span>Stuff</span>.</h2>  
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere esse, quas magnam sunt, placeat reiciendis quidem et illum quis, amet ratione veritatis. Amet nemo fugiat accusantium suscipit repellendus. Earum tempora dicta error. Sed repellat velit quod minima distinctio commodi ex necessitatibus odio ratione assumenda, totam magni praesentium facere. Dignissimos voluptates omnis, tempore molestias fugiat ut porro iste qui dolores, quam neque unde inventore, temporibus deserunt cupiditate maxime quia quas aperiam dolore! Alias vitae voluptatem harum soluta iste voluptate quaerat veniam eligendi et fugiat! Quaerat et nulla consequuntur similique molestias debitis atque tempore quisquam voluptas eligendi at, quasi accusantium itaque sequi!
+                    </p>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eum, velit fuga voluptatum quidem eligendi cumque itaque deleniti neque magnam est cum unde natus vel, voluptates quibusdam veritatis molestias aliquam, repellendus porro. Iusto expedita et quibusdam. Voluptatum, provident eligendi, aut exercitationem accusamus odio eius doloremque ipsum repudiandae voluptates odit cupiditate?
+                    </p>
+                    <div style="display: flex; align-items: flex-end;">
+                        <a class="btn" href="#" style="margin-top: 2rem; font-size: 1.5rem; width: max-content; color: white;">Contact Us →</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="./res/sculpture.png">
+                    <a href='https://pngtree.com/so/David'>David png from pngtree.com/</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- FOOTER -->
+    <section style="background-color: black;">
+        <div class="container footer">
+
+            <div class="contact-info">
+                <!--Contacts-->
+                <div class="contacts">
+                    
+                    <!-- a contact info box-->
+                    <div class="contacts-item">
+                        <img src="./res/icons/icon-location.png">
+                        <span> > </span>
+                        <a href="#">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, quod.
+                        </a>
+                    </div>
+
+
+                    <div class="contacts-item">
+                        <img src="./res/icons/icon-email.png">
+                        <span> > </span>
+                        <a href="#">
+                            contact@company.com
+                        </a>
+                    </div>
+
+
+                    <div class="contacts-item">
+                        <img src="./res/icons/icon-call.png">
+                        <span> > </span>
+                        <a href="#">
+                            +0132456789
+                        </a>
+                    </div>
+
+
+                    <div class="contacts-item">
+                        <img src="./res/icons/icon-instagram.png">
+                        <span> > </span>
+                        <a href="#">
+                            @ronaldo_official
+                        </a>
+                    </div>
+
+
+                    <!-- google translate -->
+                    <div class="contacts-item">
+                        <img src="./res/icons/icon-languages.png">
+                        <span> > </span>
+                        
+                        <div id="google_translate_element"></div>
+        
+                        <script type="text/javascript">
+                            function googleTranslateElementInit() {
+                                new google.translate.TranslateElement(
+                                    {pageLanguage: 'en'},
+                                    'google_translate_element'
+                                );
+                            }
+                        </script>
+                    
+                        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+                    </div>
+                </div>
+
+
+
+
+                <!--LEAFLET MAP-->
+                <div id="map">
+
+
+                    <!-- leaflet map code-->
+                    <script>
+                        const mapData = {
+                            coords: [51.505, -0.09],
+                            zoom: 13,
+                            description: "<center> Place name <br> hello <center>"
+                        };
+                        const map = L.map('map').setView(mapData.coords, mapData.zoom);
+
+                        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                        }).addTo(map);
+
+                        L.marker(mapData.coords).addTo(map)
+                            .bindPopup(mapData.description)
+                            .openPopup();
+                    </script>
+                </div>
+
+            </div>
+
+
+        </div>
+        <!-- all rights reserved -->
+        <div class="rights">
+            <p>Copyright © 2022 Something</p>
+        </div>
+    </section>
+
+
+
+
+
+
+</body>
+</html>

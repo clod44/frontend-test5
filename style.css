@@ -1,0 +1,491 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Figtree', sans-serif;
+    --primary: rgb(255, 230, 0);
+    --dark: rgb(23, 25, 29);
+    transition: .2s;
+}
+
+
+
+/* colored list bullets */
+ul {
+    list-style: none; /* Remove default bullets */
+}
+ul li::before {
+    font-family: monospace;
+    content: "→";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: var(--primary); /* Change the color */
+    font-size: 2rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+    text-shadow: black .1rem .1rem 0;
+    line-height: 2rem;
+}
+
+
+
+
+.banner{
+    background: url("./res/bg4.jpg");
+    background-position: top;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+}
+.banner-fade{
+    width: 100%;
+    height: 100%;
+    box-shadow: white 0 0 20rem;
+    background-color: rgba(255, 255, 255, 0.24);
+}
+
+
+
+.navbar{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+    position: fixed;
+    width: 100vw;
+    z-index: 999999;
+    height: 2rem;
+    background: rgba(0,0,0, 0.5);
+    border-bottom: var(--primary) solid 2px;
+}
+
+.navbar-item-brand{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    gap: 1rem;
+    flex-grow: 1;
+    align-items: center;
+    height: 100%;
+}
+.navbar-item-brand img{
+    height: 2rem;
+    object-fit: contain;
+}
+.navbar-item-brand h1{
+    padding-top: .5rem;
+    font-size: 2rem;
+    font-family: 'Mrs Saint Delafield', sans-serif;
+    letter-spacing: 0rem;
+    white-space: nowrap;
+}
+
+
+.navbar-item{
+    font-weight: 700;
+    display: flex;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.navbar-item:hover{
+    font-size: 1.6rem;
+    color: var(--primary);
+    text-shadow: black 0 0 1rem;
+}
+#navbar-hamburger{
+    filter: contrast(.5) brightness(999);
+    height: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    object-fit: contain;
+    object-position: center;
+}
+#navbar-hamburger:hover{
+    transform: rotate(90deg);
+}
+
+
+.banner-content{
+    padding: 6rem;
+    padding-top: 11rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.banner-content h2 {
+    text-align: center;
+    width: 50%;
+    font-size: 5vw;
+    font-weight: 700;
+    line-height: 7vw;
+    padding-bottom: 2rem;
+    text-shadow: rgba(0, 0, 0, 0.363) 0 0 1rem;
+}
+.banner-content p {
+    font-size: 1.5rem;
+}
+
+.btn{
+    padding: .5rem 1rem .5rem 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: black 0 0 .5rem;
+    color: white;
+    font-weight: bold;
+    border-radius: .5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.btn:hover{
+    background: linear-gradient(45deg, black 0%, var(--primary) 100%);
+    text-shadow: white 0 0 1rem;
+}
+.btn:active{
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--primary);
+}
+
+.container{
+    border-top: var(--primary) solid 2px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(160deg, var(--dark)0%, rgb(97, 97, 97) 100%);
+}
+
+.showcase{
+    background: url("./res/bg5.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+.showcase-fade{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 4rem 2rem 4rem;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.showcase-top{
+    display: flex;
+    flex-direction: column;
+    padding: 30rem 0 4rem 0;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.showcase-brand{
+    overflow: visible;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: 10vw 5rem;
+    margin-bottom: 20rem;
+}
+.showcase-brand img{
+    object-position: center;
+    object-fit: contain;
+    overflow: visible;
+    filter: drop-shadow(black 0 0 100rem) drop-shadow(black 0 0 1rem);
+    width: 40%;
+}
+.showcase-brand p{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 20vw;
+    font-family: 'Mrs Saint Delafield', sans-serif;
+    text-shadow: white 0 0 20rem, white 0 0 .5rem;
+    z-index: 9999;
+}
+
+.slogan{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.slogan p {
+    font-size: 2rem;
+}
+.slogan h2{
+    font-size: 5vw;
+    max-width: 50%;
+    text-align: center;
+    text-shadow: black 0 0 .5rem;
+}
+
+.showcase-box{
+    border: solid var(--primary) 2px;
+    overflow: hidden;
+    border-radius: 1rem;
+    display: flex;
+    background-color: white;
+    margin: 1rem;
+    box-shadow: black 0 0 4rem -2rem;
+    filter: drop-shadow(black .3rem .3rem .1rem);
+}
+.showcase-box div{
+    padding: 2rem 4rem 2rem 4rem;
+}
+.showcase div h3 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.showcase-box img{
+    object-fit: cover;
+    object-position: center;
+    width: 40%;
+}
+.showcase-box img:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+}
+
+.showcase-boxes{
+    display: flex;
+}
+
+.showcase-box-vertical{
+    flex-direction: column;
+}
+.showcase-box-vertical div {
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.showcase-box-vertical img{
+    margin-top: 2rem;
+    width: 100%;
+    height: 10rem;
+}
+
+
+.flex-grow{
+    flex-grow: 1;
+}
+
+.btn-showcase{
+    border: none;
+    border-radius: 0;
+    background: linear-gradient(45deg, var(--dark)0%, rgb(0, 0, 0) 100%);
+    padding: .5rem;
+}
+
+
+
+.grindset{
+    display: flex;
+    padding: 8rem;
+    gap: 2rem;
+}
+.grindset div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.grindset div img {
+    filter: brightness(0.8) hue-rotate(170deg) contrast(200%) drop-shadow(black .1rem .1rem .2rem);
+    height: 30rem;
+    object-fit: contain;
+}
+.grindset div a {
+    color: var(--dark);
+    font-size: .7rem;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+}
+.grindset h2{
+    color: white;
+    font-size: 4rem;
+    text-shadow: black .1rem .1rem .5rem;
+}
+.grindset h2 span{
+    color: var(--primary);
+}
+.grindset p {
+    color: white;
+    font-size: 1.3rem;
+}
+
+
+
+
+
+
+
+.footer{
+    background: var(--dark);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    width: 100%;
+}
+.contact-info{
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+.contacts{
+    border-left: solid var(--primary) 2px;
+    padding: 1rem;
+    flex-direction: column;
+    display: flex;
+    flex-grow: 1;
+    gap: 1rem;
+}
+.contacts-item{
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+    min-height: 2rem;
+    overflow: hidden;
+}
+.contacts-item img{
+    height: 2rem;
+    object-fit: contain;
+    filter: contrast(.5) brightness(999%);
+}
+.contacts-item span{
+    color: var(--primary);
+    font-weight: 900;
+    padding: 0;
+}
+.contacts-item a {
+    text-decoration: none;
+    color: white;
+}
+.contacts-item a:hover {
+    transition: 0s;
+    color: var(--primary);
+}
+
+.rights{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+}
+.rights p {
+    font-family: monospace;
+    letter-spacing: .2rem;
+    color: var(--primary);
+}
+
+
+
+
+#map{
+    filter: drop-shadow(black .3rem .3rem .1rem);
+    border-radius: 1rem;
+    width: 100%;
+    height: 20rem;
+    border: var(--primary) solid 2px;
+    border-bottom: black solid 2px;;
+    border-right: black solid 2px;
+}
+#map:hover{
+    transform: scale(1.05);
+}
+
+
+
+
+
+@media (max-width: 70rem) {
+    
+    .showcase-boxes{
+        flex-direction: column;
+    }
+
+
+    .grindset{
+        flex-direction: column;
+    }
+
+    .contact-info{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 55rem) {
+
+    .grindset{
+    
+        padding: 8rem 2rem 8rem 2rem;
+    }
+}
+
+@media (max-width: 40rem){
+    
+    .banner-content{
+        padding: 1rem;
+        padding-top: 5rem;
+    }
+    .banner-content h2 {
+        font-size: 2rem;
+        line-height: 2rem;
+        width: 100%;
+    }
+    .collapsable{
+        display: none;
+    }
+
+    .slogan h2{
+        font-size: 1.5rem;
+    }
+
+    .showcase-fade{
+        padding: 2rem 1rem 2rem 1rem;
+    }
+    .showcase-box{
+        flex-direction: column;
+    }
+    .showcase-box div{
+        padding: 2rem;
+    }
+
+    .showcase-box img{
+        width: 100%;
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
