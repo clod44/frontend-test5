@@ -253,13 +253,13 @@ ul li::before {
 }
 
 .showcase-box img{
+    flex-shrink: 0;
     object-fit: cover;
     object-position: center;
     width: 40%;
 }
 .showcase-box img:hover {
-    filter: brightness(1.1);
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .showcase-boxes{
@@ -418,12 +418,32 @@ ul li::before {
 
 
 
+.lots-of-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10rem;
+    overflow: hidden;
+}
+.lots-of-images img{
+    object-fit: cover;
+    width: 100vw;
+    filter: grayscale() brightness(0.5) contrast(2);
+}
+
+
+
+
 @media (max-width: 70rem) {
     
     .showcase-boxes{
         flex-direction: column;
     }
 
+    .banner-content{
+        padding: 2rem;
+    }
 
     .grindset{
         flex-direction: column;
@@ -441,6 +461,13 @@ ul li::before {
     .grindset{
     
         padding: 8rem 2rem 8rem 2rem;
+    }
+
+    .showcase-box{
+        flex-direction: column;
+    }
+    .showcase-box img{
+        width: 100%;
     }
 }
 
